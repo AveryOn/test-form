@@ -290,11 +290,11 @@ const {
     background-color: rgba(128, 128, 128, 0.1);
     transition: all 0.3s ease;
     border-radius: 3px;
-    padding: .3rem .5rem;
+    padding: .5rem .5rem;
     cursor: pointer;
 }
 .option + .option {
-    margin-top: 0.1rem;
+    margin-top: 0.2rem;
 }
 .option:hover {
     background-color: rgba(128, 128, 128, 0.3);
