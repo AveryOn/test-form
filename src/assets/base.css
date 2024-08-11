@@ -1,0 +1,55 @@
+:root {
+    --basic-bg: white;
+    --basic-fg: black;
+    --basic-duration: 0.4s;
+    --basic-shadow: 0px 1px 3px 2px rgba(0, 0, 0, 0.17);
+    --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    /* BUTTON */
+    --btn-bg: white;
+    --btn-fg: rgb(100, 100, 100);
+    --btn-icon-color: rgb(224, 171, 73);
+    --btn-hover-fg: rgb(195, 127, 2);
+    --btn-hover-bg: rgb(255, 233, 192);
+    --btn-border-color: rgb(255, 199, 95);
+    --btn-border-focus-color: rgb(227, 95, 47);
+    --btn-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.17);
+    --btn-duration: 0.3s;
+    --btn-disabled: rgba(128, 128, 128, 0.5);
+
+    /* INPUTS */
+    --input-bg: white;
+    --input-fg: rgb(74, 74, 74);
+    --input-border-color: rgb(255, 199, 95);
+    --input-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.17);
+    --input-border-focus-color: rgb(227, 95, 47);
+    --input-placeholder-fg: rgba(128, 128, 128, 0.785);
+    --input-option-select-bg: rgb(254, 229, 182);
+    --input-option-select-hover-bg: rgb(255, 218, 150);
+    --select-option-loading-bg: rgba(128, 128, 128, 0.14);
+    --select-input-loading-icon-color: rgb(255, 195, 83);
+    --select-scroll-bg: rgb(255, 208, 121);
+    --select-scroll-hover-bg: rgb(255, 208, 121);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    color: var(--basic-fg);
+    background: var(--basic-bg);
+    font-family: var(--font);
+}
+@keyframes loading {
+    100% {
+        transform: rotate(360deg);
+    }
+}
