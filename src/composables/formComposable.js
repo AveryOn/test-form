@@ -36,18 +36,34 @@ export default function useForm() {
         }
     });
 
+    // Отфильтрованный массив сотрудников по ID города
+    const filteredEmployeesByCity = computed(() => {
+        try {
+            console.log(formData.value?.city?.id);
+            if(formData.value.city) {
+                return employees.value.filter((item) => item.cityId === formData.value.city?.id);
+            } else return employees.value;
+        } catch (err) {
+            console.error('/src/composables/formComposable.js: filteredEmployeesByCity => ', err);
+            throw err;
+        }
+    });
+
     // Отфильтрованный массив сотрудников по ID цеха
     const filteredEmployeesByWorkshop = computed(() => {
         try {
             if(formData.value.workshop) {
-                return employees.value.filter((item) => item.workshopId === formData.value.workshop?.id);
-            } else return employees.value;
+                return filteredEmployeesByCity.value.filter((item) => item.workshopId === formData.value.workshop?.id);
+            } else return filteredEmployeesByCity.value;
         } catch (err) {
             console.error('/src/composables/formComposable.js: filteredEmployeesByWorkshop => ', err);
             throw err;
         }
     });
 
+
+
+    // Состояние кнопки submit - активна/не активна
     const isDisabledSubmitBtn = computed(() => {
         try {
             return (!formData.value.city && !formData.value.crew && !formData.value.employee && !formData.value.shift && !formData.value.workshop) || formDataCopy.value === JSON.stringify(formData.value);

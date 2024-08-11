@@ -126,7 +126,7 @@ const {
     // METHODS
     handlerOpenCities,
     handlerOpenWorkshops,
-    handlerOpenEmployees,
+    handlerOpenEmployees, 
     handlerOpenCrews,
     handlerOpenShifts,
     handlerChangeCity,
